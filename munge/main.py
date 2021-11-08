@@ -8,12 +8,6 @@ import utils, munge
 pack_runner = utils.misc.Pack_Runner(globals())
 
 class Munger(object):
-
-    # maybe reconsider how you're naming everything. 'Split' might be the other stage, alongside glob, not dataset.
-    # dataset might be reserved for the end, when the splits are put into the pytorch dataset format.
-
-    # maybe adjust how file-creation is done and unify the variables of file_creaton, make, and inspect
-
     def __init__(self, args, inspect=True, training=True):
         
         munge.paths.del_tmps(args.outer_path)
@@ -39,8 +33,7 @@ class Munger(object):
             }
         }
         
-        if training: # gotta figure out how this might differ for live--hopefully not much
-
+        if training:
             set_batches, self.num_total_final = get_munge_set_batch_info(args.set_batches, args.seed)
             self.full_glob_trimmer = munge.process.Full_Glob_Trimmer(args.seq_len, self.num_total_final)
             

@@ -1,3 +1,5 @@
 __pycache__
 .ipynb_checkpoints
-pull_data
+.gitignore
+all_data_info.json
+/pull_data
