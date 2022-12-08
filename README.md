@@ -2,13 +2,13 @@
 
 ## Description:
 
-Uses stock market data to train a temporal convolutional neural network to predict whether a given stock's price will increase or decrease at a defined time horizon given the stock's candlestick data (open, high, low, close) over a preceding timespan.
+This app uses stock market data to train a temporal convolutional neural network to predict whether a given stock's price will increase or decrease at a defined time horizon given the stock's candlestick data (open, high, low, close) over a preceding timespan.
 
-Divides data into three datasets: training, validation, and test. Ensures that training and validation datasets are shuffled and that the test dataset represents a later time period than the other two sets. The data is normalized and standardized based on the training dataset.
+It divides data into three datasets: training, validation, and test. Ensures that training and validation datasets are shuffled and that the test dataset represents a later time period than the other two sets. The data is normalized and standardized based on the training dataset.
 
-Enables multiple concurrent training sessions and implements random search to explore the efficacy of hyperparameter value combinations. The loss and accuracy of training, validating, and testing are viewable via tensorboard.
+It enables multiple concurrent training sessions and implements random search to explore the efficacy of hyperparameter value combinations. The loss and accuracy of training, validating, and testing are viewable via tensorboard.
 
-Enables stock trading through the TD Ameritrade API.
+It enables stock trading through the TD Ameritrade API.
 
 ## Technology used
 
